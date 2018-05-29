@@ -26,6 +26,7 @@ exports.Initialise = function (AClient)
                     let Channel = ChannelList.get(AChannel);
                     if (Channel.Messages.length <= Config.MaxMessageCount)
                         Channel.Messages.push({ message: Command + ' ' + AData['display-name'] + ':' + AMessage.substr(Command.length) });
+                    Client.say(AChannel, "@" + AData.username + " Your message will soon be displayed in few minutes"
                 }
         }
     );
